@@ -48,6 +48,6 @@ Você pode [acessar o código fonte do projeto inicial](https://github.com/Joseu
 
 <hr>
 
-No link abaixo você pode acessar meu portfólio:
+No link abaixo você pode acessar o site:
 
-[Acessar portfólio](LINK)
+[Acessar portfólio](https://aparecida-nutricao-tau.vercel.app/)
