@@ -30,7 +30,7 @@
 					<tbody id="tabela-pacientes">
 						<tr class="paciente" id="paciente-01">
 							<td class="info-nome">Paulo</td>
-							<td class="info-peso">-100</td>
+							<td class="info-peso">100</td>
 							<td class="info-altura">2.00</td>
 							<td class="info-gordura">10</td>
 							<td class="info-imc">0</td>
@@ -69,6 +69,25 @@
 					</tbody>
 				</table>
 
+			</section>
+			<section class="container">
+				<br>
+				<h2>Cadastrar paciente</h2>
+
+				<form action=""  class="formulario de cadastro">
+					<div>
+						<input type="text" placeholder="Nome" id="fm-nome">
+						<input type="number" placeholder="altura" id="fm-altura">
+						<input type="number" placeholder="peso" id="fm-peso">
+						<input type="number" placeholder="gordura" id="fm-gordura">
+
+					</div>
+					<div class="adicionar-paciente">
+						<input type="button" onclick="inseririLinha()" value="Cadatrar">
+						<input type="button" value="Limpar">
+
+					</div>
+				</form>
 			</section>
 		</main>
 		<script type="text/javascript" src="js/java.js"></script>
