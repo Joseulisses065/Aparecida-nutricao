@@ -1,6 +1,6 @@
 var pacientes = document.querySelectorAll(".paciente")
 var tabela = document.querySelector("#tabela-pacientes")
-
+var adicionar = document.querySelector('.adicionar')
 
 
 pacientes.forEach(paciente => {
@@ -21,8 +21,14 @@ pacientes.forEach(paciente => {
     }}
 }
 );
-
+function limparlinhas(){
+    document.querySelector("#fm-nome").value="";
+   document.querySelector("#fm-peso").value="";
+    document.querySelector("#fm-altura").value="";
+   document.querySelector("#fm-gordura").value="";
+}
 function inseririLinha(){
+
 
     
     var innome = document.querySelector("#fm-nome");
@@ -56,20 +62,49 @@ function inseririLinha(){
                 }else{
                     ingordura.classList.remove("campo-invalido");
 
-                    var linha=`<tr class="paciente" >
-                    <td class="info-nome">${innome.value}</td>
-                    <td class="info-peso">${inpeso.value}</td>
-                    <td class="info-altura">${inaltura.value}</td>
-                    <td class="info-gordura">${ingordura.value}</td>
-                    <td class="info-imc">${(inpeso.value/(inaltura.value*inaltura.value)).toFixed(2)}</td>
-                    </tr>`;
-                    tabela.innerHTML+=linha;
-                
+                    var pacienteTr = document.createElement("tr");
+                    
+                    var nomeTd = document.createElement("td");
+                    var pesoTd = document.createElement("td");
+                    var alturaTd = document.createElement("td");
+                    var gorduraTd = document.createElement("td");
+                    var imcTd = document.createElement("td");
+
+
+                     
+                    nomeTd.textContent = innome.value;
+                    pesoTd.textContent = inpeso.value;
+                    alturaTd.textContent = inaltura.value;
+                    gorduraTd.textContent = ingordura.value;
+                    imcTd.textContent = (inpeso.value/(inaltura.value*inaltura.value)).toFixed(2);
+
+
+                    pacienteTr.classList.add("paciente");
+                    nomeTd.classList.add("info-nome");
+                    pesoTd.classList.add("info-peso");
+                    alturaTd.classList.add("info-altura");
+                    gorduraTd.classList.add("info-gordura");
+                    imcTd.classList.add("info-imc");
+
+
+                    pacienteTr.appendChild(nomeTd);
+                    pacienteTr.appendChild(pesoTd);
+                    pacienteTr.appendChild(alturaTd);
+                    pacienteTr.appendChild(gorduraTd);
+                    pacienteTr.appendChild(imcTd);
+
+
+                    tabela.appendChild(pacienteTr);
+                    limparlinhas();
                 }
             }
         }
     }       
 }
     
+adicionar.addEventListener("click",function(event){
+    event.preventDefault();
+    inseririLinha();
 
+});
     

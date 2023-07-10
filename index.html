@@ -75,17 +75,24 @@
 				<h2>Cadastrar paciente</h2>
 
 				<form action=""  class="formulario de cadastro">
-					<div>
-						<input type="text" placeholder="Nome" id="fm-nome">
-						<input type="number" placeholder="altura" id="fm-altura">
-						<input type="number" placeholder="peso" id="fm-peso">
-						<input type="number" placeholder="gordura" id="fm-gordura">
-
-					</div>
+						<div>
+							<label for="nome">Nome</label>
+							<input name="nome" type="text" placeholder="Nome" id="fm-nome" class="campo">
+						</div>
+						<div class="grupo">
+							<label for="altura">Altura</label>
+							<input type="number" placeholder="altura" name="altura" id="fm-altura"  class="campo campo-medio">
+						</div>
+						<div class="grupo">
+							<label for="peso" >Peso</label>
+							<input type="number"  name="altura" placeholder="peso" id="fm-peso"  class="campo campo-medio">
+						</div>
+						<div class="grupo">
+							<label for="gordura">Gordura</label>
+							<input type="number" name="gordura" placeholder="gordura" id="fm-gordura"  class="campo campo-medio">
+						</div>
 					<div class="adicionar-paciente">
-						<input type="button" onclick="inseririLinha()" value="Cadatrar">
-						<input type="button" value="Limpar">
-
+						<button class="adicionar">adicionar</button>
 					</div>
 				</form>
 			</section>
