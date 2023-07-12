@@ -24,7 +24,7 @@ function calcularImcGeral(){
 }
 
 function calcularImc(peso,altura,casas){
-    return(peso/(altura*altura)).toFixed(casas);
+    return (peso/(altura*altura)).toFixed(casas);
 }
 
 adicionar.onclick = function(event){
